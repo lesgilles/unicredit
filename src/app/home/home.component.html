@@ -1,0 +1,250 @@
+
+<!-- <main> -->
+    <div class="main">
+        <app-header></app-header>
+    <div class="logo">
+        <div class="logo-icon">
+            <img src="../../assets/images/logo.png" height="45px" width="45px" alt="">
+        </div>
+        <div class="logo-text">
+            Unicredit Cooperative Application Portal
+        </div>
+    </div> 
+    <div class="container">
+        <div class="wrapper">
+            <div class="row">
+                <div class="c-order tab-sm-100 col-md-6">
+
+                    <!-- side -->
+                    <div class="left">
+                        <!-- <form id="steps" method="post" enctype="multipart/form-data"> -->
+
+                            <!-- step 1 -->
+                            <div id="step1" class="form-inner lightSpeedIn">
+                                <div class="">
+                                    <label><i class="fa-regular fa-user"></i>SERVICES YOU ARE SUBSCRIBING TO <span>*</span></label>
+                                    <div class="row">
+                                        <div class="tab-100 col-md-6">
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Free POS Device" (change)="subscribedTo($event)">
+                                                <label>Free POS Device</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Agric Loan" (change)="subscribedTo($event)">
+                                                <label>Agric Loan</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Car Loan" (change)="subscribedTo($event)">
+                                                <label>Car Loan</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Investment"  (change)="subscribedTo($event)">
+                                                <label>Investment</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Personal Loan" (change)="subscribedTo($event)">
+                                                <label>Personal Loan</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Export Finance" (change)="subscribedTo($event)">
+                                                <label>Export Finance</label>
+                                            </div> 
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Women Empowerment" (change)="subscribedTo($event)">
+                                                <label>Women Empowerment</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Students Loan" (change)="subscribedTo($event)">
+                                                <label>Students Loan</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Savings" (change)="subscribedTo($event)">
+                                                <label>Savings</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Business Loan" (change)="subscribedTo($event)">
+                                                <label>Business Loan</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="checkbox" name="service" value="Islamic Finance" (change)="subscribedTo($event)">
+                                                <label>Islamic Finance</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label><i class="fa-regular fa-cash"></i>Amount <span>*</span></label>
+                                    <input required type="number" name="amount" id="amount" placeholder="Type amount" [(ngModel)]="amount">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="busname"><i class="fa-regular fa-paper-plane"></i>Business Name <span>*</span></label>
+                                    <input required type="text" name="busname" id="busname" placeholder="Type company name" [(ngModel)]="busname">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="bustype"><i class="fa-solid fa-phone"></i>Type of Business <span>*</span></label>
+                                    <input type="text" name="bustype" id="bustype" placeholder="Enter Type of Business" [(ngModel)]="bustype">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label><i class="fa-regular fa-envelope"></i>Personal Name (Surname First) <span>*</span></label>
+                                    <input required type="text" name="name" id="name" placeholder="Type personal name"[(ngModel)]="name">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="message"><i class="fa-solid fa-message"></i>Home Address <span>*</span></label>
+                                    <input type="text" name="homeadd" id="homeadd" placeholder="Type Home Address here" [(ngModel)]="homeadd">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="soo"><i class="fa-regular fa-paper-plane"></i>State of Origin <span>*</span></label>
+                                    <input required type="text" name="soo" id="soo" placeholder="Type State of Origin" [(ngModel)]="state">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="lga"><i class="fa-solid fa-paper-plane"></i>LGA of Origin <span>*</span></label>
+                                    <input type="text" name="lga" id="lga" placeholder="Type your LGA of Origin" [(ngModel)]="lga">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label><i class="fa-solid fa-phone"></i>phone <span>*</span></label>
+                                    <input required type="text" name="phone" id="phone" placeholder="Enter Phone" [(ngModel)]="phone">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="bank"><i class="fa-solid fa-message"></i>Bank <span>*</span></label>
+                                    <input type="text" name="bank" id="bank" placeholder="Enter Bank Here" [(ngModel)]="bank">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="acctno"><i class="fa-solid fa-message"></i>Account No: <span>*</span></label>
+                                    <input type="text" name="acctno" id="acctno" placeholder="Enter Account Number" [(ngModel)]="acctno">
+                                    <span></span>
+                                </div> 
+                            </div>
+
+                             
+                         
+                    </div>
+                </div>
+                <div class="tab-sm-100 offset-md-1 col-md-5">
+                    <div class="right">
+
+                        
+                            <div id="step1" class="form-inner lightSpeedIn">
+                                <div class="input-field">
+                                    <label><i class="fa-regular fa-user"></i>Work Address <span>*</span></label>
+                                    <input required type="text" name="workadd" id="workadd" placeholder="Type Work Address" [(ngModel)]="workadd">
+                                    <span></span>
+                                </div>
+                                <div class="check-field">
+                                    <label><i class="fa-regular fa-user-secret"></i>Gender <span>*</span></label>
+                                    <div class="row">
+                                        <div class="tab-100 col-md-6"  (change)="doGender($event)">
+                                            <div class="check-single">
+                                                <input type="radio" name="gender" value="male">
+                                                <label>Male</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="radio" name="gender" value="female">
+                                                <label>Female</label>
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="check-field">
+                                    <label><i class="fa-regular fa-poo"></i>Marital Status <span>*</span></label>
+                                    <div class="row">
+                                        <div class="tab-100 col-md-6" (change)="doMaritalStatus($event)" >
+                                            <div class="check-single">
+                                                <input type="radio" name="maritalstatus" value="maried">
+                                                <label>Maried</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="radio" name="maritalstatus" value="single">
+                                                <label>Single</label>
+                                            </div>
+                                            <div class="check-single">
+                                                <input type="radio" name="maritalstatus" value="divorced">
+                                                <label>Divorced</label>
+                                            </div>
+                                        
+                                            <div class="check-single">
+                                                <input type="radio" name="maritalstatus" value="others">
+                                                <label>Others</label>
+                                            </div>
+                                          </div>   
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="bvn"><i class="fa-solid fa-message"></i>BVN <span>*</span></label>
+                                    <input type="number" name="bvn" id="bvn" placeholder="enter your BVN" [(ngModel)]="bvn">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="nin"><i class="fa-solid fa-message"></i>NIN <span>*</span></label>
+                                    <input type="number" name="nin" id="nin" placeholder="enter NIN number" [(ngModel)]="nin">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="phone"><i class="fa-solid fa-message"></i>Date of Birth <span>*</span></label>
+                                    <input type="text" name="dob" id="dob" placeholder="Type your date of birth" [(ngModel)]="dob">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label><i class="fa-regular fa-envelope"></i>Email Address <span>*</span></label>
+                                    <input required type="text" name="mail" id="mail-email" placeholder="Type email address" [(ngModel)]="email">
+                                    <span></span>
+                                </div> 
+                                <div class="input-field">
+                                    <label><i class="fa-regular fa-message"></i>Next of Kin Name <span>*</span></label>
+                                    <input required type="text" name="nokname" id="nokname" placeholder="Next of Kin Name" [(ngModel)]="nok">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="nokphone"><i class="fa-solid fa-message"></i>Next of Kin Phone <span>*</span></label>
+                                    <input type="text" name="nokphone" id="nokphone" placeholder="Next of Kin Phone" [(ngModel)]="nokphone">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="nokadd"><i class="fa-solid fa-message"></i>Next of Kin Address <span>*</span></label>
+                                    <input type="text" name="nokadd" id="nokadd" placeholder="Next of Kin Address" [(ngModel)]="nokadd">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="mmn"><i class="fa-solid fa-message"></i>Mother's Maiden Name <span>*</span></label>
+                                    <input type="text" name="mmn" id="mmn" placeholder="what is your Mother's Maiden Name" [(ngModel)]="mmn">
+                                    <span></span>
+                                </div>
+                                <div class="input-field">
+                                    <label for="who"><i class="fa-solid fa-message"></i>Who Introduced you to Unicredit Cooperative Society <span>*</span></label>
+                                    <input type="text" name="who" id="who" placeholder="who introduced you" [(ngModel)]="who">
+                                    <span></span>
+                                </div> 
+                                <div class="check-single">
+                                                <input type="checkbox" name="agree" value="paid media" checked>
+                                                <label>I hereby confirm to this organization that the information provided by me in this form are true and correct.  i also authorize that an account be opened for me at the partner bank to Unicredit Cooperative Society Limited </label>
+                                            </div> 
+                            </div>
+
+                            <!-- step Button -->
+                            <div class="submit"  > 
+                                <button type="button" [disabled]="!name || !who || !amount || !busname || !bustype || !workadd || !homeadd || !email || !phone || !nin || !bvn || !acctno  || !bank || !state || !lga || !nok || !nokphone || !nokadd" (click)="submitForm()" >Submit Form<span><i class="fa-solid fa-thumbs-up"></i></span></button>
+                                
+                            </div>
+                        <!-- </form> -->
+                        <h1>This application form is FREE!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="left-shape">
+        <img src="assets/images/top-left.png" alt="">
+    </div>
+    <div class="right-shape">
+        <img src="assets/images/top-right.png" alt="">
+    </div>
+</div>
+<!-- </main> -->
