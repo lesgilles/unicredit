@@ -99,7 +99,12 @@ export class HomeComponent {
   nokadd:this.nokadd,
   who:this.who,
   date: new Date().getTime(),
-  picture: "assets/images/placeholder.jpg"
+  picture: "assets/images/placeholder.jpg",
+  to: 'membership@unicreditcoop.com',
+  message: {
+    subject: 'Application from Website!',
+    html: "subscription:" + this.subscription  + "<br>" +  "Amount:" + this.amount  + "<br>" +  "Business Name:" + this.busname  + "<br>" +  "Business Type:" + this.bustype  + "<br>" +  "Name:" + this.name  + "<br>" +  "Work Add:" + this.workadd  + "<br>" +  "Home Address:" + this.homeadd  + "<br>" +  "email:" + this.email  + "<br>" +  "Phone:" + this.phone  + "<br>" +  "Date of Birth:" + this.dob  + "<br>" +  "BVN:" + this.bvn  + "<br>" +  "NIN:" + this.nin  + "<br>" +  "Account No:" + this.acctno  + "<br>" +  "Gender:" + this.gender  + "<br>" +  "Marital Status:" + this.marital  + "<br>" +  "State:" + this.state  + "<br>" +  "LGA:" + this.lga  + "<br>" +  "Bank:" + this.bank  + "<br>" +  "Next of Kin:" + this.nok  + "<br>" +  "Next of Kin Phone:" + this.nokphone  + "<br>" +  "Mother's Maiden Name:" + this.mmn  + "<br>" +  "Next of Kin Address:" + this.nokadd  + "<br>" +  "Introduced by:" + this.who
+  }
     }
     this.dataService.writeData(data).then(() => {
  this.subscription = [],
